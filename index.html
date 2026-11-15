@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spabeaulouz Urdaneta</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6ee;--card:#f5ebdc;--line:#e6d8c1;--gold:#b8863b;--brown:#6b4a1e;--ink:#4a3517;--white:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1810;--card:#2b2116;--line:#463620;--gold:#d9a85a;--brown:#e8c98f;--ink:#efe3cf;--white:#1f1810}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lora,Georgia,serif;line-height:1.6}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--brown);margin:0;font-weight:700}
+a{color:inherit}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px;flex-wrap:wrap}
+.logo{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;font-size:1.4rem;color:var(--brown);text-decoration:none;line-height:1.1}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap;align-items:center}
+.nav a.l{text-decoration:none;font-size:.9rem}.nav a.l.on{color:var(--gold);font-weight:500}
+.btn{background:var(--gold);color:#fff;border:0;border-radius:4px;padding:10px 20px;font:500 .9rem Lora,serif;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.alt{background:transparent;color:var(--brown);border:1px solid var(--gold)}
+.btn:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,.day:focus-visible,.slot:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+main{max-width:1100px;margin:auto;padding:28px 20px 50px;min-height:60vh}
+.view{display:none}.view.on{display:block}
+.title{text-align:center;font-size:2.2rem;margin-bottom:22px}
+.hero{min-height:340px;border-radius:6px;display:flex;flex-direction:column;justify-content:center;padding:40px;background:linear-gradient(90deg,rgba(250,246,238,.92) 35%,rgba(184,134,59,.35)),radial-gradient(circle at 80% 40%,#d9b57a,#b8863b 60%,#8a5f22)}
+.hero h1{font-size:3rem;line-height:1.05;max-width:480px;color:#8a5f22}
+.hero p{max-width:420px;color:#4a3517}.hero .row{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.hero .btn.alt{background:#fff;color:#6b4a1e}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center;margin-bottom:20px}
+.ph{height:170px;border-radius:4px;margin-bottom:8px;background:linear-gradient(135deg,#c9a066,#6b4a1e)}
+.why p{margin:2px 0 12px}.why h3{font-size:1.2rem}
+.tabs{display:flex;justify-content:center;gap:clamp(12px,3vw,34px);flex-wrap:wrap;margin-bottom:20px}
+.tab{background:none;border:0;font:700 1.35rem "Cormorant Garamond",serif;color:var(--brown);cursor:pointer;padding:2px 0;border-bottom:2px solid transparent}
+.tab.on{color:var(--gold);border-color:var(--gold)}
+.svc{display:flex;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:18px;align-items:center;flex-wrap:wrap}
+.svc .ph{width:170px;height:150px;flex:none;margin:0}.svc .info{flex:1;min-width:240px;text-align:center}
+.svc h3{font-size:1.6rem;margin-bottom:6px}
+table{margin:auto;border-collapse:collapse;font-size:.95rem}td,th{padding:3px 16px}th{font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:var(--brown)}
+.free{font-size:.85rem;color:var(--gold)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.two .svc{display:block}
+.two li{display:flex;justify-content:space-between;gap:10px;list-style:none;padding:3px 0}.two ul{padding:0;margin:8px 0 0}
+.promos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.promo{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px;text-align:center}
+.poster{aspect-ratio:3/4;border-radius:4px;background:linear-gradient(160deg,#f6e3b4,#c9953f 70%,#6b4a1e);color:#3a2610;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px;margin-bottom:10px}
+.poster b{font:700 2.8rem "Cormorant Garamond",serif;line-height:1}.poster span{font:italic 600 1.2rem "Cormorant Garamond",serif}.poster small{margin-top:8px}
+.review{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px}.stars{color:var(--gold);letter-spacing:2px}
+.about{display:flex;gap:30px;align-items:center;flex-wrap:wrap}.about .ph{width:300px;height:360px;flex:none}.about>div{flex:1;min-width:260px}
+.contact{text-align:center;margin-top:30px}.contact h2{font-size:1.8rem}.contact p{font-size:1.1rem}
+/* booking */
+.bk{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:26px;align-items:start}
+@media(max-width:760px){.bk{grid-template-columns:1fr}.hero h1{font-size:2.2rem}}
+.cal{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px}
+.calh{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.calh h3{font-size:1.4rem}.calh button{background:none;border:0;font-size:1.5rem;color:var(--brown);cursor:pointer;padding:0 10px}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}.cg .h{font-size:.75rem;color:var(--gold);font-weight:500}
+.day{border:1px solid transparent;background:var(--bg);border-radius:4px;padding:7px 0;font:inherit;color:var(--ink);cursor:pointer}
+.day:disabled{opacity:.3;cursor:not-allowed}.day.sel{background:var(--gold);color:#fff}.day.today{border-color:var(--gold)}
+.form{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px}
+label{display:block;font-weight:500;margin:12px 0 4px;font-size:.9rem}
+select,input{width:100%;padding:10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit}
+.slots{display:flex;flex-wrap:wrap;gap:8px}.slot{padding:7px 12px;border:1px solid var(--gold);background:var(--bg);color:var(--ink);border-radius:4px;cursor:pointer;font:inherit;font-size:.85rem}
+.slot.sel{background:var(--gold);color:#fff}.slot:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.sum{margin-top:14px;padding:10px;background:var(--bg);border-radius:4px;font-size:.95rem}
+.err{color:#b3261e;font-size:.85rem;min-height:1.2em;margin-top:6px}
+.ok{background:var(--bg);border:2px solid var(--gold);border-radius:6px;padding:16px;margin-bottom:16px}
+.mine{margin-top:22px}.mine li{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);list-style:none;flex-wrap:wrap}.mine ul{padding:0}
+.mine button{background:none;border:1px solid #b3261e;color:#b3261e;border-radius:4px;padding:3px 10px;cursor:pointer}
+footer{background:var(--card);border-top:1px solid var(--line);padding:22px 20px calc(22px + env(safe-area-inset-bottom,0px))}
+.fin{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.85rem}
+.fin h4{margin:0 0 6px;font:700 .9rem Lora,serif;color:var(--brown)}.fin a{display:block;text-decoration:none}
+.soc{display:flex;gap:12px}.soc a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700}
+.fb{background:#1877f2}.ig{background:linear-gradient(45deg,#f9a03f,#e1306c,#833ab4)}
+
+body{font-family:"Bookman Old Style",Lora,Georgia,serif}
+h2.title{text-transform:uppercase;letter-spacing:.5px;text-shadow:1px 1px 2px rgba(107,74,30,.25);font-size:1.9rem}
+.tab{text-transform:uppercase;font-size:1.25rem;text-shadow:1px 1px 2px rgba(107,74,30,.3)}
+.svc h3{text-transform:uppercase;font-size:1.45rem}th{text-transform:uppercase}
+.nav a.l{font-size:.72rem}.nav .btn{font-size:.62rem;padding:6px 14px;text-transform:uppercase;letter-spacing:.5px}
+.hero{background-size:cover;background-position:right center}
+.hero h1{font-family:Arial,Helvetica,sans-serif;color:#c9822b;font-size:2.3rem}
+img.ph{object-fit:cover;display:block;width:100%}.grid4 img.ph{height:190px}
+.promo .btn{width:80%;text-transform:uppercase;font-size:.75rem;letter-spacing:1px}.promo img{width:100%;display:block;border-radius:3px;margin-bottom:10px}
+.ban{display:block;margin-bottom:10px}.ban img{width:100%;display:block;border-radius:3px}
+.promos.two2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.revimg{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px}.revimg img{width:100%;display:block;border-radius:4px}
+.cal12{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.mc{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px}.mc .calh h3{font-size:1.2rem}
+.cg .day{padding:5px 0;font-size:.85rem;position:relative}.day.has::after{content:"";position:absolute;left:50%;bottom:2px;width:5px;height:5px;margin-left:-2px;border-radius:50%;background:#b3261e}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.on{display:flex}
+
+.svc .ph,.about .ph{width:auto;height:auto;max-width:100%}img.ph{width:auto;max-width:100%}.grid4 img.ph{height:auto;margin:0 auto 8px}
+.promo img,.ban img,.revimg img{width:auto;max-width:100%;margin-left:auto;margin-right:auto}.ban{text-align:center}
+.hero{background-size:auto 100%!important;background-repeat:no-repeat;background-position:right center;background-color:#f5ebdc}
+
+.svc .ph{width:210px;height:auto}.about .ph{width:min(100%,420px);height:auto}
+.grid4 img.ph{width:100%;height:210px;object-fit:cover}
+.promo img,.ban img,.revimg img{width:100%}
+.hero{background-size:cover!important;background-position:right center!important}
+.hero{background-image:linear-gradient(90deg,rgba(250,246,238,.92) 35%,rgba(250,246,238,.05)),url(images/hero.jpg)!important}
+
+.promos{grid-template-columns:repeat(auto-fit,190px)!important;justify-content:center;max-width:640px;margin:auto}
+.promos.two2{max-width:none;grid-template-columns:repeat(auto-fit,290px)!important}
+.promo img,.revimg img{width:100%}.ban img{width:280px;max-width:100%}
+.svc .ph{width:140px;height:auto}.about .ph{width:325px;height:auto}
+.grid4{grid-template-columns:repeat(auto-fit,150px)!important;justify-content:center}.grid4 img.ph{width:120px;height:140px;margin:0 auto 8px}
+.hero{min-height:200px!important;background-size:auto 100%!important}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#home" style="display:flex;align-items:center;gap:10px"><img alt="" src="images/logo.png" style="width:46px;height:46px;border-radius:50%;display:block"><span>Spabeaulouz<br>Urdaneta</span></a>
+<ul id="nav"><li><a class="l" href="#home" data-v="home">Home</a></li><li><a class="l" href="#services" data-v="services">Services</a></li><li><a class="l" href="#about" data-v="about">About Us</a></li><li><a class="l" href="#promotions" data-v="promotions">Promotions</a></li><li><a class="l" href="#reviews" data-v="reviews">Reviews</a></li><li><a class="btn" href="#booking">Book now</a></li></ul></div></header>
+<main>
+<section class="view" id="v-home"><div class="hero" id="hero"><small>Spa &amp; Aesthetics</small><h1>Relax, Rejuvenate, Be Your Best Self</h1><p>Professional spa and aesthetic services designed to refresh your body, mind, and natural beauty.</p><div class="row"><a class="btn" href="#booking">Book now</a><a class="btn alt" href="#services">Services</a></div></div>
+<h2 class="title" style="margin-top:28px">Our Services</h2>
+<div class="grid4"><div><img class="ph" alt="" data-i="h1"><h3>Basic Facial</h3><small>A soothing facial treatment that gently cleanses, relaxes, and revitalizes your skin.</small></div><div><img class="ph" alt="" data-i="h2"><h3>Manicure</h3><small>Treat your hands to a relaxing manicure that cares for your nails and cuticles.</small></div><div><img class="ph" alt="" data-i="h3"><h3>Footspa Deluxe</h3><small>Relax and unwind with a luxurious footspa designed to soothe tired feet.</small></div><div><img class="ph" alt="" data-i="h4"><h3>Lash Extension</h3><small>Enhance your natural beauty with carefully applied lash extensions.</small></div></div>
+<p style="text-align:center"><a class="btn" href="#services">View Services</a></p>
+<h2 class="title" style="margin-top:30px">Why choose Spabeaulouz?</h2>
+<div class="why"><h3>Professional Therapists</h3><p>Our skilled therapists provide attentive and personalized care to help you feel comfortable, relaxed, and well cared for.</p><h3>Safe &amp; Relaxing Environment</h3><p>Enjoy a peaceful and welcoming space where you can escape from your daily routine and fully relax.</p><h3>Premium Services</h3><p>Quality spa and aesthetic treatments designed to refresh your body, enhance your beauty, and promote wellness.</p><h3>Customer Care</h3><p>We value every guest and strive to provide friendly, thoughtful service from the moment you arrive until you leave.</p></div>
+<h2 class="title" style="margin-top:30px">Special Promotions</h2>
+<div class="promos two2" id="homepromos"></div><p style="text-align:center;margin-top:18px"><a class="btn" href="#promotions">View Promotions</a></p></section>
+
+<section class="view" id="v-services"><h2 class="title">Services</h2><div class="tabs" id="tabs"></div><div id="svclist"></div></section>
+
+<section class="view" id="v-promotions"><h2 class="title">Special Promotions</h2><div class="promos" id="promos"></div></section>
+
+<section class="view" id="v-reviews"><h2 class="title">Reviews</h2><div class="promos" id="revs"></div></section>
+
+<section class="view" id="v-about"><h2 class="title">About Us</h2><div class="about"><img class="ph" alt="About Spabeaulouz" data-i="ab"><div><p>Spabeaulouz Urdaneta is a spa and aesthetic studio in Urdaneta City, Pangasinan. Our team of professional therapists offers massage, nail care, lash and nail extensions, footspa, and facial treatments in a calm, welcoming space.</p><p>Whether you need a quick manicure or a full two-hour massage, we take care of you from the moment you walk in.</p></div></div>
+<div class="contact"><h2>Contact Us</h2><p>✉ <a href="mailto:spabeauloruzurdaneta@gmail.com">spabeauloruzurdaneta@gmail.com</a></p><p>☎ <a href="tel:+639127616002">+63 912 761 6002</a></p><p><a href="#" data-soc="fb">Spabeaulouz Urdaneta (Facebook)</a> · <a href="#" data-soc="ig">spabeaulouz (Instagram)</a></p></div></section>
+
+<section class="view" id="v-booking"><h2 class="title">Booking</h2><div id="confirm"></div><p style="text-align:center;margin-top:-10px">Tap an available date to book.</p><div class="cal12" id="cal12"></div><div class="modal" id="modal"><div class="form" style="max-width:460px;width:100%;max-height:92vh;overflow:auto"><h3>Book your visit</h3><label for="svc">Service</label><select id="svc"></select>
+<label>Date</label><div id="dlabel">Pick a date on the calendar</div>
+<label>Time</label><div class="slots" id="slots"></div>
+<label for="nm">Full name</label><input id="nm" autocomplete="name">
+<label for="ph">Mobile number</label><input id="ph" type="tel" placeholder="09XX XXX XXXX" autocomplete="tel">
+<div class="sum" id="sum">Choose a service, date, and time.</div><div class="err" id="err" role="alert"></div>
+<button class="btn" id="go" style="margin-top:8px">Confirm booking</button><button class="btn alt" id="x" style="margin-top:8px;margin-left:8px">Close</button></div></div><div class="mine"><h3>My bookings</h3><ul id="mine"></ul></div></section>
+</main>
+<footer><div class="fin"><div class="logo">Spabeaulouz<br>Urdaneta<br><small style="font:400 .75rem Lora">© 2026 Spabeaulouz Urdaneta. All Rights Reserved.</small></div>
+<div><h4>Explore</h4><a href="#home">Home</a><a href="#promotions">Promotions</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#about">About Us</a></div>
+<div><h4>Spabeaulouz Urdaneta</h4>Nice Place Compound, Urdaneta City,<br>Pangasinan, Philippines, 2428<br>spabeauloruzurdaneta@gmail.com</div>
+<div><h4>Follow us</h4><div class="soc"><a class="fb" href="#" data-soc="fb" aria-label="Facebook">f</a><a class="ig" href="#" data-soc="ig" aria-label="Instagram">◎</a></div></div></div></footer>
+<script>
+var IMG={"sw": "images/sw.jpg", "co": "images/co.jpg", "hi": "images/hi.jpg", "si": "images/si.jpg", "ma": "images/ma.jpg", "mg": "images/mg.jpg", "pe": "images/pe.jpg", "pg": "images/pg.jpg", "la": "images/la.jpg", "na": "images/na.jpg", "fb": "images/fb.jpg", "fd": "images/fd.jpg", "fa": "images/fa.jpg", "hero": "images/hero.jpg", "h1": "images/h1.jpg", "h2": "images/h2.jpg", "h3": "images/h3.jpg", "h4": "images/h4.jpg", "b1": "images/b1.jpg", "b2": "images/b2.jpg", "r1": "images/r1.jpg", "r2": "images/r2.jpg", "r3": "images/r3.jpg", "r4": "images/r4.jpg", "r5": "images/r5.jpg", "ab": "images/ab.jpg", "p1": "images/p1.jpg", "p2": "images/p2.jpg", "p3": "images/p3.jpg", "p4": "images/p4.jpg", "p5": "images/p5.jpg", "p6": "images/p6.jpg", "p7": "images/p7.jpg", "p8": "images/p8.jpg", "p9": "images/p9.jpg", "p10": "images/p10.jpg", "p11": "images/p11.jpg", "p12": "images/p12.jpg"};
+var SOC={fb:"https://www.facebook.com/search/top?q=Spabeaulouz%20Urdaneta",ig:"https://www.instagram.com/spabeaulouz/"};
+document.addEventListener("click",function(e){var a=e.target.closest("[data-soc]");if(a){e.preventDefault();window.open(SOC[a.dataset.soc],"_blank","noopener")}});
+var M=[["Swedish Massage",[["1hr",500,550],["1.5hr",700,750],["2hrs",900,950]]],["Combination Massage",[["1hr",550,600],["1.5hr",750,800],["2hrs",950,1000]]],["Hilot Massage",[["1hr",600,650],["1.5hr",800,850],["2hrs",1000,1050]]],["Signature Massage",[["1hr",650,700],["1.5hr",850,900],["2hrs",1050,1100]]]];
+var O={Manicure:[["Manicure",79,99],["Manicure Gel",250,300]],Pedicure:[["Pedicure",89,119],["Pedicure Gel",300,350]],Extensions:[["Lash Extension",399,450],["Nail Extension",699,750]],Footspa:[["Basic Footspa",199,250],["Footspa Deluxe",300,350]],Facial:[["Basic Facial",199,250]]};
+var IK={"Manicure":"ma","Manicure Gel":"mg","Pedicure":"pe","Pedicure Gel":"pg","Lash Extension":"la","Nail Extension":"na","Basic Footspa":"fb","Footspa Deluxe":"fd","Basic Facial":"fa"};
+var TABS=["Massage","Manicure","Pedicure","Extensions","Footspa","Facial"];
+var PR=[["Barkada Promo","1,299","1hr whole body massage for 4"],["Couple Massage","999","Couple massage, back and neck"],["Love Your Self","999","Whole body massage + combo"],["Love Your Self 2.0","999","Massage + footspa"],["Warts Removal","1,500","Removal + aftercare"],["Love Your Self 3.0","999","Massage + eyelash"],["Combi Massage + Footspa","899","Combi + footspa deluxe"],["Combi + Pedicure","799","Combi + footspa + pedicure"],["Basic Footspa","399","Footspa w/ manicure + pedicure"],["Combi Package","699","Combi + footspa deluxe"],["Swedish + Footspa","599","Swedish + footspa deluxe"],["Swedish + Basic Footspa","499","Swedish + basic footspa"]];
+var REV=[["Customer Feedback","The therapists are very attentive, and the place is clean and relaxing. Will book again!"],["Customer Feedback","TYSM po ma'am Lalie sa aging respect at kasi... sobrang sarap ng massage."],["Google review","The staff are very accommodating, the services are great!"],["Customer Feedback","Super relaxing and worth the price. Highly recommended."]];
+function $(i){return document.getElementById(i)}
+function peso(n){return"₱"+Number(n).toLocaleString()}
+// services
+function showTab(t){document.querySelectorAll(".tab").forEach(function(b){b.classList.toggle("on",b.textContent===t)});var h="";
+if(t==="Massage"){M.forEach(function(m,mi){h+='<div class="svc"><img class="ph" alt="" src="'+IMG[["sw","co","hi","si"][mi]]+'"><div class="info"><h3>'+m[0]+'</h3><table><tr><th>Time</th><th>Day rate</th><th>Night rate</th></tr>'+m[1].map(function(r){return"<tr><td>"+r[0]+"</td><td>"+peso(r[1])+"</td><td>"+peso(r[2])+"</td></tr>"}).join("")+'</table><div class="free">Free ear candling</div></div></div>'});
+h+='<div class="two"><div class="svc"><h3>Body Scrub</h3><ul><li>Back scrub<b>₱200</b></li><li>Whole back scrub<b>₱350</b></li><li>Whole body scrub<b>₱500</b></li></ul></div><div class="svc"><h3>Add ons</h3><ul><li>Ear candling<b>₱150</b></li><li>Ventosa or hot stone<b>₱200</b></li></ul></div></div>'}
+else O[t].forEach(function(s){h+='<div class="svc"><img class="ph" alt="" src="'+IMG[IK[s[0]]]+'"><div class="info"><h3>'+s[0]+'</h3><table><tr><th>9AM–12PM</th><th>1PM–4PM</th></tr><tr><td>'+peso(s[1])+'</td><td>'+peso(s[2])+'</td></tr></table></div></div>'});
+$("svclist").innerHTML=h+'<p style="text-align:center"><a class="btn" href="#booking">Book now</a></p>'}
+$("tabs").innerHTML=TABS.map(function(t){return'<button class="tab">'+t+'</button>'}).join("");
+$("tabs").onclick=function(e){if(e.target.classList.contains("tab"))showTab(e.target.textContent)};showTab("Massage");
+function promoHtml(p,i){return'<div class="promo"><img alt="'+p[0]+'" src="'+IMG["p"+(i+1)]+'"><button class="btn" data-promo="'+p[0]+'">Book now</button></div>'}
+$("promos").innerHTML=PR.map(promoHtml).join("");
+$("homepromos").innerHTML=["b1","b2"].map(function(k){return'<a class="ban" href="#promotions"><img alt="Special promotion" src="'+IMG[k]+'"></a>'}).join("");
+document.querySelectorAll("[data-i]").forEach(function(el){el.src=IMG[el.dataset.i]});$("hero").style.backgroundImage="linear-gradient(90deg,rgba(250,246,238,0) 0,rgba(250,246,238,0) 0),url("+IMG.hero+")";
+$("revs").innerHTML=["r1","r2","r3","r4","r5"].map(function(k){return'<div class="revimg"><img alt="Customer review" src="'+IMG[k]+'"></div>'}).join("");
+// booking
+var SV=[];M.forEach(function(m){m[1].forEach(function(r){SV.push({n:m[0]+" – "+r[0],m:1,d:r[1],g:r[2]})})});
+Object.keys(O).forEach(function(k){O[k].forEach(function(s){SV.push({n:s[0],m:0,d:s[1],g:s[2]})})});
+PR.forEach(function(p){SV.push({n:"Promo: "+p[0],m:1,d:+p[1].replace(",",""),g:+p[1].replace(",","")})});
+$("svc").innerHTML='<option value="">Select a service…</option>'+SV.map(function(s,i){return'<option value="'+i+'">'+s.n+"</option>"}).join("");
+var TODAY=new Date();TODAY.setHours(0,0,0,0);var YEAR=TODAY.getFullYear(),selDate=null,selTime=null,DB=[];
+try{DB=JSON.parse(localStorage.getItem("spa_bookings")||"[]")}catch(e){DB=[]}
+function save(){try{localStorage.setItem("spa_bookings",JSON.stringify(DB))}catch(e){}}
+function key(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function lbl(h){return(h%12||12)+":00 "+(h<12?"AM":"PM")}
+var MN=["January","February","March","April","May","June","July","August","September","October","November","December"];
+function drawCal(){var out="";for(var m=0;m<12;m++){var h="MTWTFSS".split("").map(function(x,i){return'<div class="h">'+["M","T","W","TH","F","S","S"][i]+"</div>"}).join("");
+var first=(new Date(YEAR,m,1).getDay()+6)%7,n=new Date(YEAR,m+1,0).getDate();for(var i=0;i<first;i++)h+="<div></div>";
+for(var d=1;d<=n;d++){var dt=new Date(YEAR,m,d),k=key(dt),has=DB.some(function(b){return b.date===k});h+='<button class="day'+(has?" has":"")+(dt.getTime()===TODAY.getTime()?" today":"")+'" data-k="'+k+'"'+(dt<TODAY?" disabled":"")+">"+d+"</button>"}
+out+='<div class="mc"><div class="calh"><button data-y="-1" aria-label="Previous year">‹</button><h3>'+MN[m]+" "+YEAR+'</h3><button data-y="1" aria-label="Next year">›</button></div><div class="cg">'+h+"</div></div>"}
+$("cal12").innerHTML=out}
+$("cal12").onclick=function(e){var y=e.target.dataset.y;if(y){var ny=YEAR+ +y;if(ny>=TODAY.getFullYear()){YEAR=ny;drawCal()}return}
+var b=e.target.closest(".day");if(b&&!b.disabled){selDate=b.dataset.k;selTime=null;$("err").textContent="";drawSlots();$("modal").classList.add("on")}};
+$("x").onclick=function(){$("modal").classList.remove("on")};$("modal").onclick=function(e){if(e.target===$("modal"))$("modal").classList.remove("on")};
+function hoursFor(){var s=SV[$("svc").value];var a=[];var end=s&&!s.m?15:20;for(var h=9;h<=end;h++)if(h!==12)a.push(h);return a}
+function taken(h){return DB.some(function(b){return b.date===selDate&&b.hour===h})}
+function drawSlots(){$("dlabel").textContent=selDate?new Date(selDate+"T00:00").toLocaleDateString("en-PH",{weekday:"long",year:"numeric",month:"long",day:"numeric"}):"Pick a date on the calendar";
+var now=new Date(),isToday=selDate===key(now);
+$("slots").innerHTML=selDate?hoursFor().map(function(h){var off=taken(h)||(isToday&&h<=now.getHours());return'<button class="slot'+(h===selTime?" sel":"")+'" data-h="'+h+'"'+(off?" disabled":"")+">"+lbl(h)+"</button>"}).join(""):"<small>Select a date first.</small>";summary()}
+$("slots").onclick=function(e){var b=e.target.closest(".slot");if(b&&!b.disabled){selTime=+b.dataset.h;drawSlots()}};
+$("svc").onchange=function(){if(selTime&&hoursFor().indexOf(selTime)<0)selTime=null;drawSlots()};
+function price(s,h){return h<16?s.d:s.g}
+function summary(){var s=SV[$("svc").value];$("sum").innerHTML=s&&selDate&&selTime?"<b>"+s.n+"</b><br>"+selDate+" at "+lbl(selTime)+"<br>Price: <b>"+peso(price(s,selTime))+"</b> (pay at the spa)":"Choose a service, date, and time."}
+$("go").onclick=function(){var s=SV[$("svc").value],nm=$("nm").value.trim(),ph=$("ph").value.replace(/[\s-]/g,""),er=$("err");
+if(!s)return er.textContent="Please select a service.";if(!selDate)return er.textContent="Please pick a date.";if(!selTime)return er.textContent="Please pick a time.";
+if(nm.length<2)return er.textContent="Please enter your full name.";if(!/^(09|\+639)\d{9}$/.test(ph))return er.textContent="Enter a valid mobile number, like 09127616002.";
+if(taken(selTime)){drawSlots();return er.textContent="That time was just taken. Please choose another."}
+er.textContent="";var b={id:"SB-"+Math.random().toString(36).slice(2,7).toUpperCase(),svc:s.n,date:selDate,hour:selTime,name:nm,phone:ph,price:price(s,selTime)};DB.push(b);save();
+$("confirm").innerHTML='<div class="ok"><h3>Booking confirmed ✓</h3><p>Thank you, '+esc(nm)+'! Your reference is <b>'+b.id+"</b>.<br>"+esc(b.svc)+" · "+b.date+" at "+lbl(b.hour)+" · "+peso(b.price)+'<br><small>Please arrive 10 minutes early. Pay at the spa. To change your booking, cancel it below and book again.</small></p></div>';
+selTime=null;$("svc").value="";$("nm").value="";$("ph").value="";$("modal").classList.remove("on");drawCal();mine();window.scrollTo({top:0,behavior:"smooth"})};
+function esc(t){var d=document.createElement("div");d.textContent=t;return d.innerHTML}
+function mine(){var up=DB.slice().sort(function(a,b){return(a.date+a.hour)<(b.date+b.hour)?-1:1});$("mine").innerHTML=up.length?up.map(function(b){return"<li><span><b>"+b.id+"</b> · "+esc(b.svc)+" · "+b.date+" "+lbl(b.hour)+" · "+esc(b.name)+'</span><button data-c="'+b.id+'">Cancel</button></li>'}).join(""):"<li>No bookings yet.</li>"}
+$("mine").onclick=function(e){var c=e.target.dataset.c;if(c&&confirm("Cancel booking "+c+"?")){DB=DB.filter(function(b){return b.id!==c});save();mine();drawCal()}};
+document.addEventListener("click",function(e){var p=e.target.dataset&&e.target.dataset.promo;if(p){var i=SV.findIndex(function(s){return s.n==="Promo: "+p});location.hash="booking";$("svc").value=i}});
+// routing
+function route(){var v=(location.hash||"#home").slice(1);if(!$("v-"+v))v="home";document.querySelectorAll(".view").forEach(function(s){s.classList.toggle("on",s.id==="v-"+v)});
+document.querySelectorAll("#nav a.l").forEach(function(a){a.classList.toggle("on",a.dataset.v===v)});if(v!=="booking")$("confirm").innerHTML="";window.scrollTo(0,0)}
+window.addEventListener("hashchange",route);drawCal();drawSlots();mine();route();
+</script></body></html>
